@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Capture Proof Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+            max-width: 520px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        h3 {
+            margin-bottom: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Capture Proof Settings</h2>
+    <label><input type="checkbox" id="enabled"> Enable Extension</label>
+    <label><input type="checkbox" id="showImages"> Show captured images in popup</label>
+    <!-- Mode Selection -->
+    <h3>Mode</h3>
+    <label><input type="radio" name="mode" id="modePlaylist" value="playlist"> Playlist Mode</label>
+    <label><input type="radio" name="mode" id="modeVideoSearch" value="videoSearch"> Video Search Mode</label>
+    <h3>Channel Handle</h3>
+    <div class="row">
+        <input id="channelHandle" type="text" placeholder="@channelname" />
+        <button id="resetHandle">Reset Handle</button>
+    </div>
+    <h3>Video Title</h3>
+    <input id="videoTitle" type="text" disabled placeholder="Will be auto-detected" />
+    <h3>Video Duration</h3>
+    <input id="videoDuration" type="text" disabled placeholder="Will be auto-detected" />
+    <h3>Play Seconds</h3>
+    <input id="playSeconds" type="text" disabled placeholder="Will be tracked" />
+    <h3>Stop Seconds</h3>
+    <input id="stopSeconds" type="text" disabled placeholder="Will be tracked" />
+    <script src="options.js"></script>
+</body>
+</html>
